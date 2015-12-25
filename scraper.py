@@ -6,9 +6,7 @@ from multiprocessing.dummy import Pool
 from multiprocessing import cpu_count
 import grequests
 
-start_urls = ['http://www.amazon.com/Best-Sellers-Toys-Games-Toy-Figures-Playsets/zgbs/toys-and-games/165993011/ref=zg_bs_nav_t_1_t', 
-'http://www.amazon.com/Best-Sellers-Toys-Games-Balls-Babies-Toddlers/zgbs/toys-and-games/2522032011/ref=zg_bs_nav_t_2_196601011', 
-'http://www.amazon.com/Best-Sellers-Toys-Games-Baby-Toddler/zgbs/toys-and-games/196601011/ref=zg_bs_nav_t_1_t']
+start_urls = ['http://www.amazon.com/Best-Sellers/zgbs']
 pool = Pool(cpu_count() * 20)
 
 def scrape(response, **kwargs):
